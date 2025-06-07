@@ -14,4 +14,4 @@ spring:
   application:
     name: eureka-server
   main:
-    web-application-type: reactive
+    web-application-type: web
