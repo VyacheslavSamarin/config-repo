@@ -14,4 +14,4 @@ spring:
   application:
     name: eureka-server
   main:
-    web-application-type: web
+    web-application-type: servlet
