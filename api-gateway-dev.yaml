@@ -1,0 +1,13 @@
+server:
+  port: 9001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "prometheus,health,info"
+  endpoint:
+    prometheus:
+      enabled: true
+
+service-registry-url: http://localhost:8080/services
