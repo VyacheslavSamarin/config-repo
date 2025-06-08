@@ -9,6 +9,10 @@ management:
   endpoint:
     prometheus:
       enabled: true
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
 
 eureka:
   client:
@@ -37,3 +41,4 @@ opentracing:
     udp-sender:
       host: localhost
       port: 6831
+

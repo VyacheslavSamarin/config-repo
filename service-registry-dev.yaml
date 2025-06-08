@@ -24,3 +24,9 @@ opentracing:
     udp-sender:
       host: localhost
       port: 6831
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
