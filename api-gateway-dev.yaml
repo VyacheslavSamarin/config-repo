@@ -1,22 +1,6 @@
 server:
   port: 9001
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "prometheus,health,info, gateway"
-  endpoint:
-    prometheus:
-      enabled: true
-  zipkin:
-    tracing:
-      endpoint: http://localhost:9411/api/v2/spans
-  tracing:
-    enabled: true
-    sampling:
-      probability: 1.0
-
 eureka:
   client:
     service-url:
@@ -41,4 +25,20 @@ micrometer:
   tracing:
     propagation:
       type: W3C
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "prometheus,health,info, gateway"
+  endpoint:
+    prometheus:
+      enabled: true
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
 
