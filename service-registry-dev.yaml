@@ -16,3 +16,11 @@ spring:
     name: eureka-server
   main:
     web-application-type: servlet
+
+opentracing:
+  jaeger:
+    enabled: true
+    service-name: ${spring.application.name}
+    udp-sender:
+      host: localhost
+      port: 6831
