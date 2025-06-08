@@ -34,11 +34,8 @@ spring:
           enabled: true
           lower-case-service-id: true
 
-opentracing:
-  jaeger:
-    enabled: true
-    service-name: ${spring.application.name}
-    udp-sender:
-      host: localhost
-      port: 6831
+micrometer:
+  tracing:
+    propagation:
+      type: B3
 

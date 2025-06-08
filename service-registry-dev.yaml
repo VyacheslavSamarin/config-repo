@@ -17,13 +17,10 @@ spring:
   main:
     web-application-type: servlet
 
-opentracing:
-  jaeger:
-    enabled: true
-    service-name: ${spring.application.name}
-    udp-sender:
-      host: localhost
-      port: 6831
+micrometer:
+  tracing:
+    propagation:
+      type: B3
 
 management:
   tracing:
