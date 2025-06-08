@@ -9,6 +9,9 @@ management:
   endpoint:
     prometheus:
       enabled: true
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
   tracing:
     enabled: true
     sampling:
@@ -37,5 +40,5 @@ spring:
 micrometer:
   tracing:
     propagation:
-      type: B3
+      type: W3C
 
